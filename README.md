@@ -284,73 +284,48 @@ Ready to process? (Y/n)
     ```
 
 
-### Processing Amount Sub-Sub-Menu
-
-1. Choose amount (adds that many items to a list of appropriate type)
-1. Choose another? (if yes, choose resource and choose amount again)
-
-Create new instance of corresponding procesing facility immediately after choice. Instance has `public List<T>` of appropriate type. Invoke `.Process()` method on that instance and pass in the
-
-Compost bins (can process 200 pounds of raw material each)
-6. Create egg storage warehouse (can process 40 eggs each)
-7. Create a slaughterhouse (can process 10 animals of any type at a time)
-8. Create feather drying house (can process 10 birds at a time)
-
-
-### Processing Option
-
-Slaughterhouse -> Any meat producing animal
-Process(List<IMeat> animals)
-* Ensure list count not greater than 10
-* Console.WriteLine how many pounds of meat was produced per animal
-
-Seed harvesting -> Any seed producing plant
-Harvest (List<ISeed> plants)
-* No more than 100 plants can be processed
- * Console.WriteLine how many seeds was produced per planet
-
 ### Class Definition Notes
 
-Each plant class should have a property that decribes what final product after processing
+Each resource class should have a overloaded `Process()` methods for each kind of product that it can produce. For example, here's a sample `Chicken` class.
+
+Ref: [System.Guid.NewGuid()](https://docs.microsoft.com/en-us/dotnet/api/system.guid.newguid?redirectedfrom=MSDN&view=netframework-4.7.2#System_Guid_NewGuid)
+
 ```cs
-public string seedType { get; } = "Sesame";
-public int seedAmount { get; } = 15;
-```
+public class Chicken
+{
+    // Fields
+    Guid _id;
 
 
-Each animal class should have a property that decribes what final product after processing
-```cs
-public string meatType { get; } = "Beef";
-public int meatAmount { get; } = 50;
+    // Properties
+
+
+    // Constructor
+    public Chicken ()
+    {
+        _id = Guid.NewGuid();
+    }
+
+
+    // Methods
+    public double Process (MeatProcessor equipment)
+    {
+        return 1.7;
+    }
+
+    public double Process (EggGatherer equipment)
+    {
+        return 7;
+    }
+
+    public double Process (FeatherHarvester equipment)
+    {
+        return 0.5;
+    }
+}
 ```
 
 ### Farm Class
 
 `public class Farm` needs to have `List<>` of all facilities except for slaughterhouse (see above).
-
-
-# Notes
-
-Meat producing (cow, pig, chicken, sheep, goat, duck)
-Fertilizer producing (cow, sheep, sunflower, wildflower)
-Egg producing (chicken, ostrich, duck)
-Feather producing (chicken, duck)
-Seed producing (sunflower, sesame)
-
-Process (IMeatProducer animal)
-Process (List<IMeatProducer> animals)
-
-CollectEggs (IEggProducer bird)
-CollectEggs (List<IEggProducer> birds)
-
-Defeather (IFeatherProducer bird)
-Defeather (List<IFeatherProducer> birds)
-
-Compost (IFertilizer resource)
-Compost (List<IFertilizer> resources)
-
-CollectSeed (ISeedProducer plant)
-CollectSeed (List<ISeedProducer> plant)
-
-
 
