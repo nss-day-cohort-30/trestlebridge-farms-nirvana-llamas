@@ -1,3 +1,5 @@
+![trestlebridge farm landscape](./Trestlebridge.jpg)
+
 # Trestlebridge Farms
 
 You and your friends have decided to connect with the earth again and abandon your reliance on technology and urban vices. You have built a business plan, presented it to a bank, and have secured $5 million to purchase an abandoned farm and produce high quality, responsibly grown and raised meat, seed, eggs, feathers and compost.
