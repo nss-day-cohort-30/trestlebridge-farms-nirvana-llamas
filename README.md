@@ -187,8 +187,21 @@ Where would you like to plant the Sunflowers?
     1. Natural Field (65 sunflower, 30 wildflower)
     2. Plowed Field (60 sesame, 20 sunflower)
     ```
+2. Only show facilities that are able to store the number of animals/plants. For example, the user chooses to buy Wildflower seeds, and enters 80 as the quantity, instead of showing all possible options
+    ```sh
+    1. Plowed Field (40 plants)
+    2. Plowed Field (210 plants)  <-- not a valid choice
+    3. Natural Field (0 plants)
+    ```
 
-## Processing Animals and Plants
+    Only show valid options.
+
+    ```sh
+    1. Plowed Field (40 plants)
+    3. Natural Field (0 plants)
+    ```
+
+### Processing Animals and Plants
 
 👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽
 
@@ -216,12 +229,60 @@ When the user selects a piece of equipment, then present her with the current fa
 For example, if she chose Meat Processor, the following should be presented.
 
 ```sh
-1. Grazing Field
+1. Grazing Field (20 animals)
+2. Chicken House (13 animals)
+3. Duck House (7 animals)
+
+Which facility has the animals you want to process?
+> _
 ```
 
-1. Choose which facility to be used
-1. Begin processing
-1. Then show only resources that can be used by that facility. Students
+Once the storage facility is chosen, then list the type of things in that facility.
+
+```sh
+The following animals are in the Grazing Field.
+
+1. 2 Ostrich
+2. 13 Cow
+3. 4 Pig
+4. 11 Goat
+5. 7 Sheep
+
+Which resource should be processed?
+> _
+```
+
+Lastly, when the type is chosen, ask the user how many.
+
+```sh
+How many Sheep should be processed?
+> _
+```
+
+1. Verify that the equipment has the capacity to handle that many resources.
+1. If it can query the user if they are done, or want to add more animals.
+
+```sh
+Ready to process? (Y/n)
+> _
+```
+
+1. If user is done, remove _n_ of that type from the storage facility, and add _n_ to the equipment resource list.
+2. Output what the result of processing it. For example, if user chose to process 30 sunflowers and 15 sesame plants, the following output should appear.
+    ```sh
+    4500 Sunflower seeds were produced
+    600 Sesame seeds were produced
+    ```
+1. If the user is **not** done, take the user back to the menu showing storage facility options again.
+    ```sh
+    1. Grazing Field (20 animals)
+    2. Chicken House (13 animals)
+    3. Duck House (7 animals)
+
+    Which facility has the animals you want to process?
+    > _
+    ```
+
 
 ### Processing Amount Sub-Sub-Menu
 
