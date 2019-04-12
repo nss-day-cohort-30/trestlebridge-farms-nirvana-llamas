@@ -294,7 +294,7 @@ Ref: [System.Guid.NewGuid()](https://docs.microsoft.com/en-us/dotnet/api/system.
 public class Chicken
 {
     // Fields
-    Guid _id;
+    private Guid _id;
 
 
     // Properties
@@ -322,10 +322,27 @@ public class Chicken
     {
         return 0.5;
     }
+
+    public override ToString ()
+    {
+        return $"Chicken {_id}. Bawk!";
+    }
 }
 ```
 
-### Farm Class
+## Farm Class
 
-`public class Farm` needs to have `List<>` of all facilities except for slaughterhouse (see above).
+A helpful hint to get you started. You need a `Farm` class. This class will contain lists for each kind of facility that you want to assign animals or plants to.
 
+```cs
+public class Farm
+{
+    public List<...> GrazingFields { get; } = new List<...>();
+
+    public void PurchaseGrazingLand ()
+    {
+        // Create new field and add to farm
+        GrazingFields.Append(...);
+    }
+}
+```
