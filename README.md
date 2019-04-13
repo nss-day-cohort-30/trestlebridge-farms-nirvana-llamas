@@ -4,18 +4,18 @@
 
 You and your friends have decided to connect with the earth again and abandon your reliance on technology and urban vices. You have built a business plan, presented it to a bank, and have secured $5 million to purchase an abandoned farm and produce high quality, responsibly grown and raised meat, seed, eggs, feathers and compost.
 
-You have met with other growers and ranchers in the Middle Tennessee area and have decided to purchase the following starter stock. For each resource, you will find where it will be stored on the farm, what is produces when processed, and how much it produces.
+You have met with other growers and ranchers in the Middle Tennessee area and have decided on the animals and plants below to build your farm. For each resource, you will find where it will be stored on the farm, what is produces when processed, and how much it produces.
 
-#### Livestock
+## Livestock
 
-| Cows  | Pigs  | Chickens  | Ducks | Goats | Ostriches | Sheep |
-|---|---|---|---|---|--|--|
-|  Grazing Fields | Grazing Fields | Chicken House | Duck House | Grazing Fields | Grazing Fields | Grazing Fields |
-| Meat | Meat | Egg / Feather / Meat | Egg / Feather | Compost | Egg / Meat | Meat |
-| 18.25kg | 8.4kg | 7 / .5kg / 1.7kg | 6 / .75kg |  7.5kg | 3 / 2.6kg | 5kg |
+| | Cows  | Pigs  | Chickens  | Ducks | Goats | Ostriches | Sheep |
+|---|---|---|---|---|---|--|--|
+| **Location** |  Grazing Fields | Grazing Fields | Chicken House | Duck House | Grazing Fields | Grazing Fields | Grazing Fields |
+| **Product** | Meat | Meat | Egg / Feather / Meat | Egg / Feather | Compost | Egg / Meat | Meat |
+| **Amount** | 18.25kg | 8.4kg | 7 / .5kg / 1.7kg | 6 / .75kg |  7.5kg | 3 / 2.6kg | 5kg |
 
 
-#### Seed
+## Seed
 
 | Sunflower | Wildflower | Sesame |
 |--- |---|---|
