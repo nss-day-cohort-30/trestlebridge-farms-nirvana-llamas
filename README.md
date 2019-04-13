@@ -17,11 +17,11 @@ You have met with other growers and ranchers in the Middle Tennessee area and ha
 
 ## Seed
 
-| Sunflower | Wildflower | Sesame |
-|--- |---|---|
-| Plowed or Natural Field | Natural Field  | Plowed Field |
-| Seed / Compost | Compost | Seed |
-| 150 / 2.6kg | 3.3kg | 40 |
+| | Sunflower | Wildflower | Sesame |
+|---|---|---|---|
+|**Location**| Plowed or Natural Field | Natural Field  | Plowed Field |
+|**Product**| Seed / Compost | Compost | Seed |
+|**Amount**| 150 / 2.6kg | 3.3kg | 40 |
 
 ## Storage Facilities
 
