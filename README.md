@@ -17,11 +17,13 @@ You have met with other growers and ranchers in the Middle Tennessee area and ha
 
 ## Seed
 
+When you purchase seeds, you purchase enough for an entire row of plants in a field.
+
 | | Sunflower | Wildflower | Sesame |
 |---|---|---|---|
 |**Location**| Plowed or Natural Field | Natural Field  | Plowed Field |
 |**Product**| Seed / Compost | Compost | Seed |
-|**Amount**| 150 / 2.6kg | 3.3kg | 40 |
+|**Amount**| 650 / 21.6kg | 30.3kg | 520 |
 
 ## Storage Facilities
 
@@ -29,7 +31,7 @@ Listed below are the capacities of each storage facility.
 
 | Plowed Field | Natural Field | Grazing Field | Chicken House | Duck House |
 |---|---|---|---|---|
-| 250 plants | 145 plants | 50 grazers | 78 | 42 |
+| 13 rows of plants | 10 rows of plants | 20 grazers | 15 | 12 |
 
 
 ## Processing Equipment
@@ -103,14 +105,7 @@ Choose animals to purchase.
 > _
 ```
 
-When the user makes a choice, then immediately show another prompt asking for how many. If the user chose Ostrich, then she should see this.
-
-```sh
-How many Ostrich would you like to buy?
-> _
-```
-
-When she enters in how many to buy, then display all of the locations in which the animals can be stored. The current number of animals should be displayed for each location.
+When the user enters in what to buy, then display all of the locations in which the animals can be stored. The current number of animals should be displayed for each location.
 
 ```sh
 1. Grazing Field (21 animals)
