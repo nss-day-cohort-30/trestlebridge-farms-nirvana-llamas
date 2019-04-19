@@ -108,7 +108,7 @@ Choose animals to purchase.
 When the user enters in what to buy, then display all of the locations in which the animals can be stored. The current number of animals should be displayed for each location.
 
 ```sh
-1. Grazing Field (21 animals)
+1. Grazing Field (16 animals)
 2. Grazing Field (4 animals)
 
 Where would you like to place the animals?
@@ -121,7 +121,7 @@ If the user chose to place them in a location that would be over capacity if the
 **** That facililty is not large enough ****
 ****     Please choose another one      ****
 
-1. Grazing Field (21 animals)
+1. Grazing Field (16 animals)
 2. Grazing Field (4 animals)
 
 Where would you like to place the animals?
@@ -151,9 +151,9 @@ How many Sunflower would you like to plant?
 When she enters in how many to plant, then display all of the locations in which the plants can be planted. The current number of plants should be displayed for each location.
 
 ```sh
-1. Plowed Field (40 plants)
-2. Plowed Field (210 plants)
-3. Natural Field (0 plants)
+1. Plowed Field (8 rows of plants)
+2. Plowed Field (5 rows of plants)
+3. Natural Field (0 rows of plants)
 
 Where would you like to plant the Sunflowers?
 > _
@@ -165,9 +165,9 @@ If the user chose to place them in a location that would be over capacity if the
 **** That facililty is not large enough ****
 ****     Please choose another one      ****
 
-1. Plowed Field (40 plants)
-2. Plowed Field (210 plants)
-3. Natural Field (0 plants)
+1. Plowed Field (8 rows of plants)
+2. Plowed Field (5 rows of plants)
+3. Natural Field (0 rows of plants)
 
 Where would you like to plant the Sunflowers?
 > _
@@ -184,18 +184,18 @@ Where would you like to plant the Sunflowers?
     1. Natural Field (65 sunflower, 30 wildflower)
     2. Plowed Field (60 sesame, 20 sunflower)
     ```
-2. Only show facilities that are able to store the number of animals/plants. For example, the user chooses to buy Wildflower seeds, and enters 80 as the quantity, instead of showing all possible options
+2. Only show facilities that are able to store the number of animals/plants. For example, the user chooses to buy Wildflower seeds and one of the fields is already at capacity.
     ```sh
-    1. Plowed Field (40 plants)
-    2. Plowed Field (210 plants)  <-- not a valid choice
+    1. Plowed Field (5 rows of plants)
+    2. Plowed Field (13 rows of plants)  <-- not a valid choice
     3. Natural Field (0 plants)
     ```
 
-    Only show valid options.
+     Instead of showing all possible options, only show valid options.
 
     ```sh
-    1. Plowed Field (40 plants)
-    3. Natural Field (0 plants)
+    1. Plowed Field (5 rows of plants)
+    3. Natural Field (0 rows of plants)
     ```
 
 ### Processing Animals and Plants
