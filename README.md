@@ -36,11 +36,11 @@ Listed below are the capacities of each storage facility.
 
 ## Processing Equipment
 
-Listed below is how many animals/plants can be processed by each kind of equipment.
+Listed below is how many animals/plants can be processed by each kind of equipment at one time.
 
 | Meat Processor | Seed Harvester | Composter | Feather Harvester | Egg Gatherer |
 |---|---|---|---|---|
-| 22 animals | 110 plants | 400 plants | 18 birds | 55 eggs |
+| 7 animals | 5 rows of plants | 8 rows of plants | 8 birds | 15 eggs |
 
 ## Farm Animals and Raw Materials System (FARMS)
 
