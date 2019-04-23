@@ -5,6 +5,7 @@ using Trestlebridge.Interfaces;
 namespace Trestlebridge.Models.Animals {
     public class Cow : IResource, IGrazing, IMeatProducing {
 
+
         private Guid _id = Guid.NewGuid();
         private double _meatProduced = 18.25;
 

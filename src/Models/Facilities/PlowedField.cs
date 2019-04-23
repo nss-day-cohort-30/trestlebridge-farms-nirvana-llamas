@@ -7,12 +7,12 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities
 {
-    public class GrazingField : IFacility<IGrazing>
+    public class PlowedField : IFacility<ISeedProducing>
     {
         private int _capacity = 2;
         private Guid _id = Guid.NewGuid();
 
-        private List<IGrazing> _animals = new List<IGrazing>();
+        private List<ISeedProducing> _plants = new List<ISeedProducing>();
 
         public double Capacity
         {
@@ -22,11 +22,11 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-        public bool AddResource(IGrazing animal)
+        public bool AddResource(ISeedProducing plant)
         {
-            if (_animals.Count < _capacity)
+            if (_plants.Count < _capacity)
             {
-                _animals.Add(animal);
+                _plants.Add(plant);
                 return true;
             }
             else
@@ -37,15 +37,17 @@ namespace Trestlebridge.Models.Facilities
         }
         public int getCount()
         {
-            return _animals.Count;
+            return _plants.Count;
         }
-        public bool AddResource(List<IGrazing> animals)  // TODO: Take out this method for boilerplate
+        public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
         {
-            if (_animals.Count + animals.Count <= _capacity)
+            if (_plants.Count + plants.Count <= _capacity)
             {
-                _animals.AddRange(animals);
+                _plants.AddRange(plants);
                 return true;
-            }else{
+            }
+            else
+            {
                 return false;
             }
         }
@@ -55,8 +57,8 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Grazing field {shortId} has {this._animals.Count} animals\n");
-            this._animals.ForEach(a => output.Append($"   {a}\n"));
+            output.Append($"Grazing field {shortId} has {this._plants.Count} plants\n");
+            this._plants.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
         }

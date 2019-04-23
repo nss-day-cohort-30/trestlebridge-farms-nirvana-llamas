@@ -67,6 +67,7 @@ namespace Trestlebridge
                 else
                 {
                     Console.WriteLine($"Invalid option: {option}");
+                    Console.ReadLine();
                 }
             }
         }
