@@ -12,6 +12,8 @@ namespace Trestlebridge.Models.Plants
             return _seedsProduced;
         }
 
+        public string Product { get; } = "Seeds";
+
         public override string ToString () {
             return $"Sesame. Yum!";
         }

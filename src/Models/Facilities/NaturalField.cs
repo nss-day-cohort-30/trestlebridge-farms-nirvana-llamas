@@ -7,12 +7,12 @@ using Trestlebridge.Models.Animals;
 
 namespace Trestlebridge.Models.Facilities
 {
-    public class PlowedField : IFacility<ISeedProducing>, ICompost_Seed
+    public class NaturalField : IFacility<ICompostable>, ICompost_Seed
     {
         private int _capacity = 2;
         private Guid _id = Guid.NewGuid();
 
-        private List<ISeedProducing> _plants = new List<ISeedProducing>();
+        private List<ICompostable> _plants = new List<ICompostable>();
 
         public double Capacity
         {
@@ -22,7 +22,7 @@ namespace Trestlebridge.Models.Facilities
             }
         }
 
-        public bool AddResource(ISeedProducing plant)
+        public bool AddResource(ICompostable plant)
         {
             if (_plants.Count < _capacity)
             {
@@ -39,7 +39,7 @@ namespace Trestlebridge.Models.Facilities
         {
             return _plants.Count;
         }
-        public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
+        public bool AddResource(List<ICompostable> plants)  // TODO: Take out this method for boilerplate
         {
             if (_plants.Count + plants.Count <= _capacity)
             {
@@ -57,7 +57,7 @@ namespace Trestlebridge.Models.Facilities
             StringBuilder output = new StringBuilder();
             string shortId = $"{this._id.ToString().Substring(this._id.ToString().Length - 6)}";
 
-            output.Append($"Plowed field {shortId} has {this._plants.Count} plants\n");
+            output.Append($"Natural field {shortId} has {this._plants.Count} plants\n");
             this._plants.ForEach(a => output.Append($"   {a}\n"));
 
             return output.ToString();
