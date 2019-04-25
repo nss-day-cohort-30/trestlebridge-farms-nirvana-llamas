@@ -45,7 +45,9 @@ namespace Trestlebridge.Models.Facilities
             {
                 _animals.AddRange(animals);
                 return true;
-            }else{
+            }
+            else
+            {
                 return false;
             }
         }

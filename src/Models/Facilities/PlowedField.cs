@@ -21,7 +21,7 @@ namespace Trestlebridge.Models.Facilities
                 return _capacity;
             }
         }
-public int getCount()
+        public int getCount()
         {
             return _plants.Count;
         }
@@ -38,7 +38,7 @@ public int getCount()
                 return false;
             }
         }
-public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
+        public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
         {
             if (_plants.Count + plants.Count <= _capacity)
             {

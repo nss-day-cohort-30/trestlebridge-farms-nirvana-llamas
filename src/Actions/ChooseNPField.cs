@@ -35,9 +35,7 @@ namespace Trestlebridge.Actions
 
             for (int i = 0; i < Fields.Count; i++)
             {
-
                 {
-
                     switch (Fields[i].Value.GetType().ToString())
                     {
                         case "Trestlebridge.Models.Facilities.NaturalField":
@@ -65,7 +63,6 @@ namespace Trestlebridge.Actions
                 case "Trestlebridge.Models.Facilities.NaturalField":
                     if (amount == 1)
                     {
-
                         if (!farm.NaturalFields[Fields[choice].Key].AddResource((ICompostable)plant))
                         {
                             Console.WriteLine($"Natural Field {choice + 1} is at max capacity!");

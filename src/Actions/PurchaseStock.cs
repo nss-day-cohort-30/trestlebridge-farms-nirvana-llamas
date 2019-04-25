@@ -32,7 +32,7 @@ namespace Trestlebridge.Actions
                     ChooseGrazingField.CollectInput(farm, amount, typeof(Cow));
                     // ChooseGrazingField.CollectInput(farm, new Cow());
                     break;
-                case 2: 
+                case 2:
                     Console.Clear();
                     Console.WriteLine();
                     Console.WriteLine("How many Ostrich would you like to buy?");
