@@ -23,10 +23,24 @@ namespace Trestlebridge.Actions
             switch (Int32.Parse(choice))
             {
                 case 1:
-                    ChooseGrazingField.CollectInput(farm, new Cow());
+                    Console.Clear();
+                    Console.WriteLine();
+                    Console.WriteLine("How many Cows would you like to buy?");
+                    Console.Write("> ");
+                    string a = Console.ReadLine();
+                    int amount = Int32.Parse(a);
+                    ChooseGrazingField.CollectInput(farm, amount, typeof(Cow));
+                    // ChooseGrazingField.CollectInput(farm, new Cow());
                     break;
-                case 2:
-                    ChooseGrazingField.CollectInput(farm, new Ostrich());
+                case 2: 
+                    Console.Clear();
+                    Console.WriteLine();
+                    Console.WriteLine("How many Ostrich would you like to buy?");
+                    Console.Write("> ");
+                    string a1 = Console.ReadLine();
+                    int amount1 = Int32.Parse(a1);
+                    ChooseGrazingField.CollectInput(farm, amount1, typeof(Ostrich));
+                    // ChooseGrazingField.CollectInput(farm, new Ostrich());
                     break;
                 default:
                     break;

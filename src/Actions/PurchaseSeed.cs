@@ -12,14 +12,10 @@ namespace Trestlebridge.Actions
             Console.WriteLine("1. Sesame");
             Console.WriteLine("2. Wildflower");
             Console.WriteLine("3. Sunflower	");
-
             Console.WriteLine();
             Console.WriteLine("What are you buying today?");
-
             Console.Write("> ");
             string choice = Console.ReadLine();
-
-
             switch (Int32.Parse(choice))
             {
                 case 1:
@@ -29,9 +25,14 @@ namespace Trestlebridge.Actions
                     ChooseNaturalField.CollectInput(farm, new Wildflower());
                     break;
                 case 3:
-                    ChooseNPField.CollectInput(farm, new Sunflower());
-
-                    // ChoosePlowedField.CollectInput(farm, new Sunflower());
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("How many Sunflower would you like to plant?");
+                        Console.Write("> ");
+                        string a = Console.ReadLine();
+                        int amount = Int32.Parse(a);
+                        ChooseNPField.CollectInput(farm, amount, typeof(Sunflower));
+                    }
                     break;
                 default:
                     break;

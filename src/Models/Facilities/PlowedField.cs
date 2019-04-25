@@ -9,7 +9,7 @@ namespace Trestlebridge.Models.Facilities
 {
     public class PlowedField : IFacility<ISeedProducing>, ICompost_Seed
     {
-        private int _capacity = 2;
+        private int _capacity = 5;
         private Guid _id = Guid.NewGuid();
 
         private List<ISeedProducing> _plants = new List<ISeedProducing>();
@@ -21,7 +21,10 @@ namespace Trestlebridge.Models.Facilities
                 return _capacity;
             }
         }
-
+public int getCount()
+        {
+            return _plants.Count;
+        }
         public bool AddResource(ISeedProducing plant)
         {
             if (_plants.Count < _capacity)
@@ -35,11 +38,7 @@ namespace Trestlebridge.Models.Facilities
                 return false;
             }
         }
-        public int getCount()
-        {
-            return _plants.Count;
-        }
-        public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
+public bool AddResource(List<ISeedProducing> plants)  // TODO: Take out this method for boilerplate
         {
             if (_plants.Count + plants.Count <= _capacity)
             {

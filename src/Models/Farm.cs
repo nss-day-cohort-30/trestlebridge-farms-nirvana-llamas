@@ -21,8 +21,14 @@ namespace Trestlebridge.Models
             Console.WriteLine(typeof(T).ToString());
             switch (typeof(T).ToString())
             {
-                case "Cow":
+                case "Trestlebridge.Interfaces.IGrazing":
                     GrazingFields[index].AddResource((IGrazing)resource);
+                    break;
+                case "Trestlebridge.Interfaces.ISeedProducing":
+                    PlowedFields[index].AddResource((ISeedProducing)resource);
+                    break;
+                case "Trestlebridge.Interfaces.ICompostable":
+                    NaturalFields[index].AddResource((ICompostable)resource);
                     break;
                 default:
                     break;

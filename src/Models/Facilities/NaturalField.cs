@@ -9,7 +9,7 @@ namespace Trestlebridge.Models.Facilities
 {
     public class NaturalField : IFacility<ICompostable>, ICompost_Seed
     {
-        private int _capacity = 2;
+        private int _capacity = 6;
         private Guid _id = Guid.NewGuid();
 
         private List<ICompostable> _plants = new List<ICompostable>();
@@ -21,7 +21,10 @@ namespace Trestlebridge.Models.Facilities
                 return _capacity;
             }
         }
-
+        public int getCount()
+        {
+            return _plants.Count;
+        }
         public bool AddResource(ICompostable plant)
         {
             if (_plants.Count < _capacity)
@@ -35,10 +38,7 @@ namespace Trestlebridge.Models.Facilities
                 return false;
             }
         }
-        public int getCount()
-        {
-            return _plants.Count;
-        }
+
         public bool AddResource(List<ICompostable> plants)  // TODO: Take out this method for boilerplate
         {
             if (_plants.Count + plants.Count <= _capacity)
